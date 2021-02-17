@@ -1,5 +1,7 @@
 # image_sorting
-Comparing ID of images in two directories and transfer them to same or different directory. The Code has been writen in python.
+This script makes two directories called 'same' and 'different' by compairing image ids from index and 
+others directory. The same directory containes pairs of images with the same id number and the different directory 
+contains pairs of different ids. The Code is written in python.
 
 
 Table of Contents
@@ -25,30 +27,25 @@ The script requires the following to run:
 Usage
 -----
 
-First you should install python on your system and download the dataset.
-Then you can run the script with cmd or Anaconda Prompt.
+First install python on your system and download the dataset.
+Then run the script on command prompt.
 
 example:
 ```sh
-(base) C:\>python Compare_ID_Shenasa.py --index_directory C:Anahita\dataset\index --others_directory C:Anahita\dataset\others
---output_directory C:\Users\Anahita
+C:\>python pair_generator.py --index C:\Users\Niyousha\dataset\index --others C:\Users\Niyousha\dataset\others
+--output C:\Users\Niyousha
 
 ```
 Note : There is a space between each directory above.
 
 The Script has the following inputs.
 
-`index_directory` is the path of index folder, where the main pictures exist.
+`index` is the path of index folder, where the main pictures exist.
 
-`others_directory` is the path of others folder, where the copies of index pictures exist.
+`others` is the path of others folder, where the copies of index pictures exist.
 
-`output_directory` is the path of output, where the two folders of "same" & "different" are created.
+`output` is the path of output, where the two folders of "same" & "different" are created.
 
-### Error handling
-
-The script will raise fallowing error if directories are not provided.
-
-AttributeError: `NoneType` object
 
 Contributing
 -----
