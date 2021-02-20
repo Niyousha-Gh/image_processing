@@ -5,8 +5,8 @@ import argparse
 import sys
 
 class GeneratePairs:
-	"""Generate same and different pairs of images from index and others datasets"""
 
+	""" Generate same and different pairs of images from index and others datasets """
 	def __init__(self, index_dir, others_dir, outputs_dir):
        
 		self.index_dir = index_dir.replace('\\', '/')
@@ -15,7 +15,6 @@ class GeneratePairs:
 
 
 	def generate(self):
-
         	pair_number = self._generate_same_pairs()
         	self._generate_different_pairs(pair_number)
 
