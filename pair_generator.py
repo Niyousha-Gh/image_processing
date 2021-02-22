@@ -25,7 +25,7 @@ class GeneratePairs:
 		try:  
     			os.mkdir(path)  
 		except OSError as error:  
-    			print('An OS Error occured: ', error)
+    			print('[OSError]: ', error)
 
 		# Save the total number of same pairs
 		pair_number = 0
@@ -65,22 +65,21 @@ class GeneratePairs:
 		try:  
     			os.mkdir(path)  
 		except OSError as error:
-    			print('An OS Error occured: ', error)
+    			print('[OSError]: ', error)
 
-		
 		# Copy the images to the outputs folder
 		if index_id == img_1:
 			src_1 = self.index_dir + '/' + img_1
 			shutil.copy(src_1, path)
 			src_2 = self.others_dir + '/' + img_2
 			shutil.copy(src_2, path)
-
-
+			
 		elif index_id == img_2:
 			src_1 = self.others_dir + '/' + img_1
 			shutil.copy(src_1, path)
 			src_2 = self.index_dir + '/' + img_2
 			shutil.copy(src_2, path)
+			
 		else:
 			src_1 = self.others_dir + '/' + img_1
 			shutil.copy(src_1, path)
@@ -95,7 +94,7 @@ class GeneratePairs:
 		try:  
     			os.mkdir(path)  
 		except OSError as error:  
-    			print('An OS Error occured: ', error)
+    			print('[OSError]: ', error)
 		
 		# Generate different pairs in the same number of same pairs 
 		count = 0
@@ -127,7 +126,7 @@ def main(args):
 		generatePairs = GeneratePairs(args.index, args.others, args.output)
 		generatePairs.generate()
 	else:
-		print("\n[]You should enter three directories for index, others and output")
+		print("\n[AttributeError]: You should enter three directories for index, others and output")
 
 		
 if __name__ == '__main__':
